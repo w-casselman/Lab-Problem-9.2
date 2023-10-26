@@ -30,7 +30,6 @@ int main(void)
 	return 0;
 }
 
-
 bool isSortedIncreasing(int array[], int size)
 {
 	for (int i = 1; i < size; i++)
