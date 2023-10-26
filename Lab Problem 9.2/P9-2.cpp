@@ -7,6 +7,7 @@
 using namespace std;
 
 bool isSortedIncreasing(int array[], int size);
+bool isSortedDecreasing(int array[], int size);
 
 int main(void)
 {
@@ -20,6 +21,7 @@ int main(void)
 	}
 
 	isSortedIncreasing(arr, SIZE) ? cout << "The data are increasing." << endl : cout << "The data are not increasing." << endl;
+	isSortedDecreasing(arr, SIZE) ? cout << "The data are decreasing." << endl : cout << "The data are not decreasing." << endl;
 
 	return 0;
 }
@@ -29,6 +31,18 @@ bool isSortedIncreasing(int array[], int size)
 	for (int i = 1; i < size; i++)
 	{
 		if (array[i - 1] > array[i])
+		{
+			return false;
+		}
+	}
+	return true;
+}
+
+bool isSortedDecreasing(int array[], int size)
+{
+	for (int i = 1; i < size; i++)
+	{
+		if (array[i - 1] < array[i])
 		{
 			return false;
 		}
